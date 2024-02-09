@@ -1,0 +1,22 @@
+Use Company
+Go
+
+SELECT * FROM tableDepartments
+
+SELECT DepID, DepartmentName,
+	CASE DepartmentName
+		WHEN 'IT' THEN 'INFORMATION TECHNOLOGY'
+		WHEN 'HR' THEN 'HUMAN RESOURCES'
+		WHEN 'FI' THEN 'FINANCIAL INSTITUTION'
+		ELSE 'OTHER DEPARTMENTS'
+	END
+FROM tableDepartments
+
+
+-- OTHER STEP
+SELECT DepID, DepartmentName,
+	CASE
+		WHEN DepartmentName='IT' THEN 'INFORMATION TECHNOLOGY'
+	ELSE 'OTHER DEPARTMENTS'
+	END
+FROM tableDepartments
